@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauro Lentes - Sustentabilidade e Saúde Visual</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center fixed; background-size: cover; }
+        header { background: #B22222; color: white; text-align: center; padding: 20px; }
+        section { padding: 20px; max-width: 800px; margin: auto; background: rgba(255, 255, 255, 0.9); border-radius: 10px; }
+        .box { background: #ffdddd; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+        footer { background: #B22222; color: white; text-align: center; padding: 10px; position: relative; bottom: 0; width: 100%; }
+        .logo { text-align: center; padding: 20px; }
+        canvas { display: block; margin: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mauro Lentes</h1>
+        <p>ODS 12 - Consumo Responsável | ODS 3 - Saúde e Bem-Estar</p>
+    </header>
+    <div class="logo">
+        <p>[Espaço reservado para o logo da empresa]</p>
+    </div>
+    <section>
+        <div class="box">
+            <h2>Descarte Correto de Óculos</h2>
+            <p>Contribua para um mundo mais sustentável! Traga seus óculos antigos para reciclagem ou doação.</p>
+            <p>Estima-se que milhões de óculos sejam descartados incorretamente todos os anos, gerando resíduos desnecessários.</p>
+            <p>Você sabia que 90% dos materiais dos óculos podem ser reaproveitados? Faça a diferença!</p>
+            <canvas id="graficoDescarte" width="400" height="200"></canvas>
+        </div>
+        <div class="box">
+            <h2>Saúde Visual para Todos</h2>
+            <p>Facilitamos o acesso a óculos de qualidade para quem precisa.</p>
+            <p>Estudos mostram que cerca de 2,2 bilhões de pessoas no mundo têm deficiência visual, sendo que quase metade desses casos poderiam ser evitados com acesso a óculos.</p>
+            <p>Doe óculos antigos e ajude alguém a enxergar melhor!</p>
+            <canvas id="graficoSaude" width="400" height="200"></canvas>
+        </div>
+        <div class="box">
+            <h2>Por que isso é importante?</h2>
+            <p>O descarte incorreto de óculos contribui para a poluição ambiental e desperdício de materiais reutilizáveis.</p>
+            <p>A falta de acesso a óculos pode impactar negativamente a educação e a produtividade de milhões de pessoas.</p>
+        </div>
+        <div class="box">
+            <h2>Contato</h2>
+            <p>Email: contato@maurolentes.com</p>
+            <p>Endereço: Rua Exemplo, 123 - Cidade</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Mauro Lentes | Sustentabilidade e Saúde Visual</p>
+    </footer>
+    <script>
+        const ctx1 = document.getElementById('graficoDescarte').getContext('2d');
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['Reciclado', 'Descartado Incorretamente'],
+                datasets: [{
+                    data: [90, 10],
+                    backgroundColor: ['#B22222', '#ff9999']
+                }]
+            }
+        });
+
+        const ctx2 = document.getElementById('graficoSaude').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Deficiência Visual', 'Casos Evitáveis'],
+                datasets: [{
+                    label: 'Milhões de Pessoas',
+                    data: [2200, 1000],
+                    backgroundColor: ['#B22222', '#ff9999']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
